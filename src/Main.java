@@ -11,7 +11,7 @@ class Main {
 
     // Creates a hand for the community cards.
   /*
-  Note: Although called community cards, these cards are from the same deck as the cards delt
+  Note: Although called community cards, these cards are from the same deck as the cards dealt
   to the players, unlike in some variations. This means no more than 4 cards of the same rank
   are ever active.
   */
@@ -29,7 +29,7 @@ class Main {
         // Runs the game logic while true.
         while (continueGame)
         {
-            // Creates 6 players, 5 ai players and 1 for the human to manipulate.
+            // Creates 6 players, 5 AI players and 1 for the human to manipulate.
             PlayerAI player1 = new PlayerAI();
             PlayerAI player2 = new PlayerAI();
             PlayerAI player3 = new PlayerAI();
@@ -148,7 +148,7 @@ class Main {
                         System.out.println("                    It's Showtime Folks                   ");
                         System.out.println("**********************************************************");
 
-                        // AFter all betting rounds are complete, will need to determine the winner through a showdown.
+                        // After all betting rounds are complete, will need to determine the winner through a showdown.
                         checkWinFromShowdown(player1, player2, player3, player4, player5, humanPlayer);
 
                         // Calls the subroutine to determine whether the game should continue.
@@ -182,7 +182,7 @@ class Main {
         deck.shuffle();
     }
 
-    // THe subroutine that determines whether or not to continue the game.
+    // THe subroutine that determines whether to continue the game.
     public static void continuePlaying(Player player1, Player player2, Player player3, Player player4, Player player5,
                                        Player humanPlayer)
     {
@@ -391,8 +391,8 @@ class Main {
             players[4].mustBet = mandatoryAmount;
             players[5].mustBet = mandatoryAmount;
 
-            // Checks who payed the blinds already.
-            // If a player payed a blind, reduce that amount from the 2 they must bet since it's already paid.
+            // Checks who paid the blinds already.
+            // If a player paid a blind, reduce that amount from the 2 they must bet since it's already paid.
             if (startingPlayer == 1) {
                 players[0].mustBet -= 1;
                 players[1].mustBet -= 2;
@@ -493,7 +493,7 @@ class Main {
                     // Adds the bet money to the pot.
                     pot = pot + players[i].mustBet;
 
-                    // The current player no longer has to bet anything, its been put in the pot.
+                    // The current player no longer has to bet anything, it's been put in the pot.
                     players[i].mustBet = 0;
 
                     // Give information on the player's status after the raise.
@@ -563,7 +563,7 @@ class Main {
 
                 // Accounts for folded players.
                 uninterruptedTurns++;
-                // Once the uninterruptedTurns reaches six, no body wants to bet anymore so end the round by breaking the loop.
+                // Once the uninterruptedTurns reaches six, nobody wants to bet anymore so end the round by breaking the loop.
                 if (uninterruptedTurns == 6)
                 {
                     break;
