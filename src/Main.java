@@ -898,27 +898,6 @@ class Main {
 
 
 
-/**
-
- * An object of type Card represents a playing card from a
-
- * standard Poker deck, including Jokers. The card has a suit, which
-
- * can be spades, hearts, diamonds, clubs, or joker. A space, heart,
-
- * diamond, or club has one of the 13 values: ace, 2, 3, 4, 5, 6, 7,
-
- * 8, 9, 10, jack, queen, or king. Note that "ace" is considered to be
-
- * the smallest value. A joker can also have an associated value;
-
- * this value can be anything and can be used to keep track of several
-
- * different jokers.
-
- */
-
-
 
 
 
